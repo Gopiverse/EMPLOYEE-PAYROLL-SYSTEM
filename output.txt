@@ -1,0 +1,150 @@
+PS C:\Users\DELL\Documents\JAVA PROJECT> javac -cp "lib/mysql-connector-j-9.7.0.jar;src" src\*.java
+PS C:\Users\DELL\Documents\JAVA PROJECT> java -cp "lib/mysql-connector-j-9.7.0.jar;src" Main
+
+=================================Employee Payroll System=================================
+1. Add Employee
+2. Display Employees
+3. Search Employee
+4. Update Salary
+5. Delete Employee
+6. Exit
+Enter Choice : 1
+---------------------
+Enter Name : Harry Potter
+Enter Department : Wizard
+Enter Salary : 80000
+Enter ID : 89
+Employee Added Successfully!
+
+=================================Employee Payroll System=================================
+1. Add Employee
+2. Display Employees
+3. Search Employee
+4. Update Salary
+5. Delete Employee
+6. Exit
+Enter Choice : 2
+---------------------
+Employee ID : 55
+Name : Gopika G S
+Department : IT
+Salary : 45000.0
+-----------------------
+Employee ID : 67
+Name : Rita
+Department : IT
+Salary : 90000.0
+-----------------------
+Employee ID : 89
+Name : Harry Potter
+Department : Wizard
+Salary : 80000.0
+-----------------------
+
+=================================Employee Payroll System=================================
+1. Add Employee
+2. Display Employees
+3. Search Employee
+4. Update Salary
+5. Delete Employee
+6. Exit
+Enter Choice : 3
+---------------------
+Enter Employee ID : 67
+Employee ID : 67
+Name : Rita
+Department : IT
+Salary : 90000.0
+
+=================================Employee Payroll System=================================
+1. Add Employee
+2. Display Employees
+3. Search Employee
+4. Update Salary
+5. Delete Employee
+6. Exit
+Enter Choice : 3
+---------------------
+Enter Employee ID : 80
+Employee Not Found!
+
+=================================Employee Payroll System=================================
+1. Add Employee
+2. Display Employees
+3. Search Employee
+4. Update Salary
+5. Delete Employee
+6. Exit
+Enter Choice : 4
+---------------------
+Enter Employee ID : 55
+Enter New Salary : 87000
+Salary Updated!
+
+=================================Employee Payroll System=================================
+1. Add Employee
+2. Display Employees
+3. Search Employee
+4. Update Salary
+5. Delete Employee
+6. Exit
+Enter Choice : 2
+---------------------
+Employee ID : 55
+Name : Gopika G S
+Department : IT
+Salary : 87000.0
+-----------------------
+Employee ID : 67
+Name : Rita
+Department : IT
+Salary : 90000.0
+-----------------------
+Employee ID : 89
+Name : Harry Potter
+Department : Wizard
+Salary : 80000.0
+-----------------------
+
+=================================Employee Payroll System=================================
+1. Add Employee
+2. Display Employees
+3. Search Employee
+4. Update Salary
+5. Delete Employee
+6. Exit
+Enter Choice : 5
+---------------------
+Enter Employee ID : 67
+Employee Deleted!
+
+=================================Employee Payroll System=================================
+1. Add Employee
+2. Display Employees
+3. Search Employee
+4. Update Salary
+5. Delete Employee
+6. Exit
+Enter Choice : 2
+---------------------
+Employee ID : 55
+Name : Gopika G S
+Department : IT
+Salary : 87000.0
+-----------------------
+Employee ID : 89
+Name : Harry Potter
+Department : Wizard
+Salary : 80000.0
+-----------------------
+
+=================================Employee Payroll System=================================
+1. Add Employee
+2. Display Employees
+3. Search Employee
+4. Update Salary
+5. Delete Employee
+6. Exit
+Enter Choice : 6
+---------------------
+Thank You!

@@ -1,4 +1,4 @@
-## Employee Payroll Management System
+# Employee Payroll Management System
 
 A simple **command-line Employee Payroll Management System** developed using **Java**, **JDBC**, and **MySQL**. This application allows users to perform CRUD (Create, Read, Update, Delete) operations on employee records through a menu-driven interface.
 

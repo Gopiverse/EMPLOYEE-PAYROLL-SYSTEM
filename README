@@ -1,39 +1,183 @@
-Copyright (c) 2000, 2026, Oracle and/or its affiliates.
+# Employee Payroll Management System
 
-This is a release of MySQL Connector/J, a JDBC Type 4 driver for MySQL that also
-supports the new X DevAPI.
+A simple **command-line Employee Payroll Management System** developed using **Java**, **JDBC**, and **MySQL**. This application allows users to perform CRUD (Create, Read, Update, Delete) operations on employee records through a menu-driven interface.
 
-License information can be found in the LICENSE file. This distribution may
-include materials developed by third parties. For license and attribution
-notices for these materials, please refer to the LICENSE file.
+---
 
-For more information on MySQL Connector/J, visit
-https://dev.mysql.com/doc/connector-j/en/.
+## Features
 
-For additional downloads and the source of MySQL Connector/J,
-visit https://dev.mysql.com/downloads/.
+* ➕ Add a new employee
+* 📋 Display all employees
+* 🔍 Search an employee by ID
+* 💰 Update employee salary
+* ❌ Delete an employee
+* 💾 MySQL database integration using JDBC
+* 🖥️ Menu-driven command-line interface
 
-MySQL Connector/J is brought to you by the MySQL team at Oracle.
+---
 
-Notice:
-- In order to use the logging capabilities provided by the default
-  implementation com.mysql.cj.log.Slf4JLogger, it is required to add one or more
-  jars for Simple Logging Facade for Java (SLF4J) to your CLASSPATH.
-- To use the X DevAPI features in Connector/J, you also need the external
-  library protobuf-java, which you can download manually from the official Maven
-  repository and add it to the CLASSPATH, or use Maven's automatic dependency
-  resolution features by adding a dependency to "GroupId: com.mysql" and
-  "ArtifactId: mysql-connector-j" to your project's pom.xml file.
-- To use OCI AIM authentication, you will need to add the external library
-  oci-java-sdk-common, which you can download manually from the official Maven
-  repository and add it to the CLASSPATH, or use Maven's automatic dependency
-  resolution features by adding a dependency to "GroupId: com.oracle.oci.sdk"
-  and "ArtifactId: oci-java-sdk-common" to your project's pom.xml file.
-- In order to enable OpenTelemtry native instrumentation, it is required to use
-  the OpenTelemetry libraries opentelemetry-api and opentelemetry-context, and
-  an OpenTelemetry implementation, typically the library opentelemetry-sdk or
-  the Java agent opentelemetry-javaagent, which you can download manually from
-  the official Maven repository and add it to the CLASSPATH, or use Maven's
-  automatic dependency resolution features, by adding a dependency to
-  "GroupId: io.opentelemetry" and the corresponding artifacts to your project's
-  pom.xml file.
+## Technologies Used
+
+* Java
+* JDBC (Java Database Connectivity)
+* MySQL
+* MySQL Connector/J
+
+---
+
+## Project Structure
+
+```text
+Employee-Payroll-System/
+│
+├── src/
+│   ├── DBConnection.java
+│   ├── Employee.java
+│   ├── EmployeeCRUD.java
+│   └── Main.java
+│
+├── README.md
+└── .gitignore
+```
+
+> **Note:** The MySQL Connector/J JAR file is **not included** in this repository. Please download it separately.
+
+---
+
+## Database Setup
+
+### 1. Create a MySQL database
+
+```sql
+CREATE DATABASE payroll;
+```
+
+### 2. Use the database
+
+```sql
+USE payroll;
+```
+
+### 3. Create the employees table
+
+```sql
+CREATE TABLE employees (
+    id INT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    department VARCHAR(100) NOT NULL,
+    salary DOUBLE NOT NULL
+);
+```
+
+---
+
+## Configure Database Connection
+
+Open **`DBConnection.java`** and update the following values:
+
+```java
+private static final String URL = "jdbc:mysql://localhost:3306/payroll";
+private static final String USER = "YOUR_USERNAME";
+private static final String PASSWORD = "YOUR_PASSWORD";
+```
+
+Replace:
+
+* `YOUR_USERNAME` → your MySQL username (e.g., `root`)
+* `YOUR_PASSWORD` → your MySQL password
+
+---
+
+## Download MySQL Connector/J
+
+Download the latest MySQL Connector/J from:
+
+https://dev.mysql.com/downloads/connector/j/
+
+Extract the ZIP and place the JAR file inside a `lib` folder:
+
+```text
+lib/
+└── mysql-connector-j-9.7.0.jar
+```
+
+---
+
+## Compile
+
+From the project root directory:
+
+```bash
+javac -cp "lib/mysql-connector-j-9.7.0.jar;src" src\*.java
+```
+
+---
+
+## Run
+
+```bash
+java -cp "lib/mysql-connector-j-9.7.0.jar;src" Main
+```
+
+---
+
+## Sample Output
+
+```text
+=================================Employee Payroll System=================================
+
+1. Add Employee
+2. Display Employees
+3. Search Employee
+4. Update Salary
+5. Delete Employee
+6. Exit
+
+Enter Choice :
+```
+
+---
+
+## Available Operations
+
+### Add Employee
+
+```
+Enter Name
+Enter Department
+Enter Salary
+Enter ID
+```
+
+### Display Employees
+
+Displays all employee records stored in the database.
+
+### Search Employee
+
+Searches an employee using the Employee ID.
+
+### Update Salary
+
+Updates the salary of an existing employee.
+
+### Delete Employee
+
+Deletes an employee record using the Employee ID.
+
+---
+
+## Future Improvements
+
+* Employee login authentication
+* Department management
+* Salary slip generation
+* Attendance and leave management
+* Input validation
+* PreparedStatement for enhanced SQL security
+
+---
+
+## Author
+
+**Gopika GS**
